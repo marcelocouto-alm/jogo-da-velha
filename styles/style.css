@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(/styles/images/background-body.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Cormorant SC', serif;
+    font-size: 60px;
+    text-shadow: 0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.players {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.player1, .player2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cormorant SC', serif;
+    color: #e5e0ac;
+    font-size: 1rem;
+    font-weight: 1000;
+}
+
+.player1 p {
+    padding: 5px;
+    background-color: #000000;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #2e3182;
+}
+
+.player2 p {
+    padding: 5px;
+    background-color: #000000;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #D13434;
+}
+
+.stage {
+    display: grid;
+    grid-template-columns: 130px 130px 130px;
+    grid-template-rows: 130px 130px 130px;
+    gap: 5px 5px;
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        ". . .";
+}
+
+.square {
+    width: 130px;
+    height: 130px;
+    background-image: url(/styles/images/background-square.jpg);
+    background-size: 130px;
+    border: 1px solid gray;
+    display: inline-block;
+}
+
+.Mago {
+    position: relative;
+}
+
+.Mago:after {
+    position: absolute;
+    content: "";
+    background-image: url(/styles/images/mago.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 130px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.Dragão {
+    position: relative;
+}
+
+.Dragão:after {
+    position: absolute;
+    content: "";
+    background-image: url(/styles/images/dragao.png);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 130px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.result {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Cormorant SC', serif;
+    font-size: 30px;
+    color: #000000;
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+}
+
+button {
+    margin-top: 10px;
+    border-top: 2px solid #000000;
+    background: #f3ad09;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f3ad09), to(#f3ad09));
+    background: -webkit-linear-gradient(top, #f3ad09, #f3ad09);
+    background: -moz-linear-gradient(top, #f3ad09, #f3ad09);
+    background: -ms-linear-gradient(top, #f3ad09, #f3ad09);
+    background: -o-linear-gradient(top, #f3ad09, #f3ad09);
+    padding: 13px 26px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+    color: #000000;
+    font-size: 24px;
+    font-family: 'Cormorant SC', serif;
+    font-weight: bold;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+button:hover {
+    border-top: 2px solid #000000;;
+    background: #855226;
+    color: #ccc;
+}
+
+button:active {
+    border-top-color: #f8d0ac;
+    background: #f8d0ac;
+}
