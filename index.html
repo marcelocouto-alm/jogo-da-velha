@@ -10,20 +10,21 @@
 </head>
 
 <body>
+    <div class="container">
 
-    <head class="title">
-        <h1>Jogo da Velha</h1>
-    </head>
-
-    <main class="container">
-        <div class="players">
+        <header class="header">
             <div class="player1">
-                <p>Player 1 - Mago</p>
                 <img src="/styles/images/mago.png" height="100px" width="100px">
             </div>
-        </div>
+            <div class="titulo">
+                <h1>Jogo da Velha</h1>
+            </div>
+            <div class="player2">
+                <img src="/styles/images/dragao.png" height="100px" width="100px">
+            </div>
+        </header>
 
-        <div class="stage">
+        <main class="stage">
             <div>
                 <div id="0" class="square"></div>
                 <div id="1" class="square"></div>
@@ -39,28 +40,17 @@
                 <div id="7" class="square"></div>
                 <div id="8" class="square"></div>
             </div>
-        </div>
+        </main>
 
-        <div class="players">
-            <div class="player2">
-                <p>Player 2 - Dragão</p>
-                <img src="/styles/images/dragao.png" height="100px" width="100px">
+        <div class="gameOver">
+            <div class="result" id="result"></div>
+            <div>
+                <button id="restartButton" onclick="restartGame">Reiniciar</button>
             </div>
-
         </div>
-
-    </main>
-    
-    <div class="result" id="result"></div>
-    </div>
-
-    <div>
-        <button id="restartButton" onclick="restartGame">Reiniciar</button>
     </div>
 
     <script src="/scripts/game.js"></script>
     <script src="/scripts/interface.js"></script>
-
 </body>
-
 </html>
